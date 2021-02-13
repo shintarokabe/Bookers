@@ -9,9 +9,11 @@
   </thead>
 
   <tbody>
+
     <tr>
-      <td>titleのリンク</td>
-      <td>bodyのリンク</td>
+      <% @books.each do |book| %>
+      <td><%= link_to book.title, book_path(book) %></td>
+      <td><%= link_to book.body, book_path(book) %></td>
       <td>
         <a>showのリンク</a>
       </td>
@@ -21,6 +23,7 @@
       <td>
         <a>Destroyのリンク</a>
       </td>
+      <% end %>
     </tr>
   </tbody>
 

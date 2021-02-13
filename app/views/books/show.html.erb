@@ -1,8 +1,9 @@
 <%= notice %>
 
-<p><strong>Title:</strong></p><%= link_to book.title, book_path(@book) %>
-<p><strong>Body</strong></p><%= link_to book.body, book_path(@book) %>
+<p><strong>Title: </strong><%= @book.title %></p>
+<p><strong>Body: </strong><%= @book.body %></p>
 
-<%= link_to "Edit", edit_book_path(@book) %>
-"|"
-<%= link_to "Back", index_book_path(@book) %>
+<p><%= link_to "Edit", edit_book_path(@book) %>
+ | 
+<%= link_to "Back", new_book_path(@book) %>
+</p>
