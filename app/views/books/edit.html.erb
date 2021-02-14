@@ -1,13 +1,16 @@
 <h1>Editing Book</h1>
 <%= form_with model:@book, local:true do |f| %>
 
-<p>title</p>
+<div>title</div>
 <%= f.text_field :title %>
-<p>Body</p>
+<div>Body</div>
 <%= f.text_area :body %>
+<div>
 <%= f.submit 'Update Book' %>
+</div>
 <% end %>
 
-<%= link_to "Edit", check_book_path(@book) %>
-"|"
-<%= link_to "Back", check_book_path(@book) %>
+<div><%= link_to "Show", book_path(@book) %>
+ |
+<%= link_to "Back", new_book_path(@books) %>
+</div>
